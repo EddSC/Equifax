@@ -22,8 +22,9 @@ import lombok.*;
 public class DatosConsulta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private Date fechaConsulta;
-    private int numeroConsulta;
+    private Integer numeroConsulta;
     private String usuario;
     private BigDecimal tipoCambio;
 }
