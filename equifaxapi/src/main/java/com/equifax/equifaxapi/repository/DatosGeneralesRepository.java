@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Query;
 
 @Repository
-public interface GeneralesRepository extends JpaRepository<DatosGenerales, Integer> {
-    @Query(value = "SELECT o FROM DatosGenerales o WHERE o.datosPersonales=?1")
-    Optional<DatosGenerales> findByNumero(String datosPersonales);
+public interface DatosGeneralesRepository extends JpaRepository<DatosGenerales, Integer> {
+    @Query(value = "SELECT o FROM DatosGenerales o WHERE o.respuesta=?1")
+    Optional<DatosGenerales> findItemsByRespuesta(Respuesta respuesta);
 }

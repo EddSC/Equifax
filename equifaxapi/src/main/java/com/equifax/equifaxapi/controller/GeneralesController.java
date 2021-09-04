@@ -14,16 +14,16 @@ import com.equifax.equifaxapi.repository.*;
 
 public class GeneralesController {
 
-    private GeneralesRepository generalesRepository;
+    private DatosGeneralesRepository datosGeneralesRepository;
 
-    public GeneralesController(GeneralesRepository generalesData){
-        this.generalesRepository = generalesData;
+    public GeneralesController(DatosGeneralesRepository datosGeneralesData){
+        this.datosGeneralesRepository = datosGeneralesData;
     }
 
     @PostMapping(value = "/generales", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Integer> datos(@RequestBody DatosGenerales c){
-        generalesRepository.save(c);
-        generalesRepository.flush();
+        datosGeneralesRepository.save(c);
+        datosGeneralesRepository.flush();
         return new ResponseEntity<Integer>(c.getId(),HttpStatus.CREATED);
     }
 }

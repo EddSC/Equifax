@@ -12,15 +12,15 @@ import com.equifax.equifaxapi.repository.*;
 @RestController
 @RequestMapping(value = "api/equifax/detalles", produces = "application/json")  
 
-public class DetalleCreditosController {
-    private DetalleCreditosRepository detalleCreditoRepository;
+public class DetalleCreditoController {
+    private DetalleCreditoRepository detalleCreditoRepository;
 
-    public DetalleCreditosController(DetalleCreditosRepository detalleRepository){
+    public DetalleCreditoController(DetalleCreditoRepository detalleRepository){
         this.detalleCreditoRepository = detalleRepository;
     }
 
     @PostMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Integer> create(@RequestBody DetallesCreditos dc){
+    public ResponseEntity<Integer> create(@RequestBody DetallesCredito dc){
         detalleCreditoRepository.save(dc);
         detalleCreditoRepository.flush();
         return new ResponseEntity<Integer>(dc.getId(),HttpStatus.CREATED);

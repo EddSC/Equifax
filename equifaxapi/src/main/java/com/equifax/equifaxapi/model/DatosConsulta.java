@@ -1,14 +1,9 @@
 package com.equifax.equifaxapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.math.BigDecimal;
 import java.sql.Date;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import javax.persistence.*;
 import lombok.*;
 
 @Getter
@@ -27,4 +22,9 @@ public class DatosConsulta {
     private Integer numeroConsulta;
     private String usuario;
     private BigDecimal tipoCambio;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "respuesta_id")    
+    private Respuesta respuesta;
+    
 }

@@ -1,11 +1,7 @@
 package com.equifax.equifaxapi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.*;
 import lombok.*;
 
 @Getter
@@ -24,4 +20,8 @@ public class DatosGenerales {
     private String representantes;
     private String direcciones;
     private String telefonos;
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "respuesta_id")    
+    private Respuesta respuesta;
 }
