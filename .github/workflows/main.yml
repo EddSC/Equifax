@@ -21,7 +21,7 @@ jobs:
         java-version: '16'
     
     - name: Build with Maven Backend
-      run: mvn -B package --file equifaxapi/pom.xml -DskipTests
+      run: mvn -B package --file equifaxapi/pom.xml -DHEROKU_PSS_DB=${{ secrets.HEROKU_PSS_DB }} -DPORT=${{ secrets.PORT }}
 
     - name: Build, Push and Release a Docker container to Heroku Backend
       uses: gonuit/heroku-docker-deploy@v1.3.2 
