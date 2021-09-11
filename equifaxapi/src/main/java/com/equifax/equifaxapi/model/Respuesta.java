@@ -15,8 +15,9 @@ public class Respuesta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String resumenCredito;
-    private String usuario;
+    private String dni;
+    private String nombres;
+    private String apellidos;
     @Transient
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "respuesta_id")

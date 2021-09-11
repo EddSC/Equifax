@@ -1,6 +1,12 @@
 package com.equifax.equifaxapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.persistence.*;
 import lombok.*;
 
@@ -16,10 +22,12 @@ public class DetallesCredito {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String description;
-    private String detalleCreditosRCC; //saldo de crédito
-    private String detalleCreditosMFNZ; //Creditos Microfinanzas
-    private String avalistasAvalados;   //avalistas y avalados
+    private String entidad; //Microfinanzas
+    private BigDecimal deuda; //saldo de deuda
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Date fecha; 
+    private Integer calificacion;   //del 0 - 4
+    private Integer diasVencidas;
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "respuesta_id")    

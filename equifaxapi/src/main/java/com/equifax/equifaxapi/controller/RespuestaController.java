@@ -32,9 +32,9 @@ public class RespuestaController {
         return new ResponseEntity<Integer>(p.getId(),HttpStatus.CREATED);
     }
 
-    @GetMapping(value = "/{usuario}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Respuesta> findByNumber(@PathVariable String usuario){
-        Optional<Respuesta> optRespuesta = respuestaData.findByNumero(usuario);
+    @GetMapping(value = "/{dni}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Respuesta> findByNumber(@PathVariable String dni){
+        Optional<Respuesta> optRespuesta = respuestaData.findByNumero(dni);
         if(optRespuesta.isPresent()){
             Respuesta respuesta = optRespuesta.get();
             List<DatosConsulta> datosConsultas = consultaData.findItemsByRespuesta(respuesta);

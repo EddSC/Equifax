@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.Query;
 
 @Repository
 public interface RespuestaRepository extends JpaRepository<Respuesta, Integer>{
-    @Query(value = "SELECT o FROM Respuesta o WHERE o.usuario=?1")
-    Optional<Respuesta> findByNumero(String usuario);
+    @Query(value = "SELECT o FROM Respuesta o WHERE o.dni=?1")
+    Optional<Respuesta> findByNumero(String dni);
 }
