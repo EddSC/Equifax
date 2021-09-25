@@ -9,14 +9,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value ="api/respuesta", produces ="application/json")
+@RequestMapping(value ="api/equifax", produces ="application/json")
 
 public class RespuestaController {
     private final RespuestaRepository respuestaData;
     private final ConsultaRepository consultaData;
 
     public RespuestaController(RespuestaRepository respuestaData,
-        ConsultaRepository consultaData){
+    ConsultaRepository consultaData){
         this.respuestaData = respuestaData;
         this.consultaData = consultaData;
     }

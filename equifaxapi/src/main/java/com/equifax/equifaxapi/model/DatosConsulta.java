@@ -1,6 +1,9 @@
 package com.equifax.equifaxapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.math.BigDecimal;
 import java.sql.Date;
 import javax.persistence.*;
@@ -18,10 +21,12 @@ public class DatosConsulta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Date fechaConsulta;
-    private Integer numeroConsulta;
-    private String usuario;
-    private BigDecimal tipoCambio;
+    private String entidad; //Microfinanzas
+    private BigDecimal deuda; //saldo de deuda
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Date fecha; 
+    private Integer calificacion;   //del 0 - 4
+    private Integer diasVencidas;
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "respuesta_id")    

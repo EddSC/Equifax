@@ -22,14 +22,6 @@ public class Respuesta {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "respuesta_id")
     private List<DatosConsulta> datosConsultas;
-    @Transient
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "respuesta_id")
-    private List<DatosGenerales> datosGenerale;
-    @Transient
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "respuesta_id")
-    private List<DetallesCredito> detalleCreditos;
 
     
 }
