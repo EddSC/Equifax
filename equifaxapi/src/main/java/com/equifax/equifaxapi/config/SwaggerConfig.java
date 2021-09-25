@@ -22,8 +22,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Equifax API")
-                .description("Api de Riesgo Crediticio")
+                .title("My App Equifax API")
+                .description("This application designed for integration propousal")
                 .build();
     }
 }
