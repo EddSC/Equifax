@@ -9,6 +9,26 @@
             "mainClass": "com.equifax.equifaxapi.EquifaxapiApplication",
             "projectName": "equifaxapi",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-webApplication<web>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.equifaxweb.web.webApplication",
+            "projectName": "web",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-WebApplication<web>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.equifaxweb.web.WebApplication",
+            "projectName": "web",
+            "args": ""
         }
     ]
 }
