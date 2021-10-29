@@ -46,7 +46,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <th:block th:if="${session.user==null}">
-              <li><a href="/cliente/create"><span class="glyphicon glyphicon-user"></span>Sign Up </a></li>
+              <li><a href="/cliente/registro"><span class="glyphicon glyphicon-user"></span>Sign Up </a></li>
               <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </th:block>   
             <th:block th:if="${session.user!=null}">

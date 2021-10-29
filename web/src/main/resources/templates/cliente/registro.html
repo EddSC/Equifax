@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'login')}">
 <head>
 	<meta charset="UTF-8">
 	<title>Registro</title> 
@@ -9,26 +9,45 @@
 
 </head>  
 <body>
- <form class="formulario">
+ <form class="formulario" th:object="${client}" th:action="@{/cliente/registro}" method="post">
     
     <h1>Regístrate</h1>
      <div class="contenedor">
      
-     <div class="input-contenedor">
+         <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
-         <input type="text" placeholder="Nombre Completo">
+         <input type="text" placeholder="Nombres" th:field="*{firstName}">
          
          </div>
+
+         <div class="input-contenedor">
+         <i class="fas fa-user icon"></i>
+         <input type="text" placeholder="Apellidos" th:field="*{lastName}">
+            
+            </div>
          
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
-         <input type="text" placeholder="Correo Electronico">
+         <input type="text" placeholder="Correo Electronico" data-inputmask="'alias': 'email'"
+         autocomplete="off" th:field="*{email}">
          
          </div>
+
+         <div class="input-contenedor">
+            <i class="fas fa-envelope icon"></i>
+            <input type="text" placeholder="Teléfono" data-inputmask="'mask': '(999) 999-9999'" th:field="*{phone}">
+            
+        </div>
          
+        <div class="input-contenedor">
+            <i class="fas fa-user icon"></i>
+             <input type="text" placeholder="Usuario" th:field="*{user.userID}">
+
          <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
-         <input type="password" placeholder="Contraseña">
+         <input type="password" placeholder="Contraseña" th:field="*{user.password}">
+
+         
          
          </div>
          <input type="submit" value="Registrate" class="button">
