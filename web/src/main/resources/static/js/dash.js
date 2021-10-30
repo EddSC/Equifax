@@ -189,5 +189,5 @@ hand.events.on("positionchanged", function(){
 
 setInterval(function() {
     var value = chartMin + Math.random() * (chartMax - chartMin);
-    hand.showValue(value, 1000, am4core.ease.cubicOut);
+    hand.showValue(972, 1000, am4core.ease.cubicOut);
 }, 2000);
