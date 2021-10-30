@@ -11,7 +11,7 @@
 <body>
  <form class="formulario" th:object="${client}" th:action="@{/cliente/registro}" method="post">
     
-    <h1>Regístrate</h1>
+    <h1>Regístrese</h1>
      <div class="contenedor">
      
          <div class="input-contenedor">
@@ -43,11 +43,10 @@
          <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
          <input type="password" placeholder="Contraseña" th:field="*{user.password}">
+         </div>
 
          
-         
-         </div>
-         <input type="submit" value="Registrate" class="button">
+         <input type="submit" value="Registrar" class="button">
          <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
          
      </div>
@@ -76,9 +75,9 @@
     body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #1c92d2;
-    background: -webkit-linear-gradient(to top, #f2fcfe, #1c92d2);
-    background: linear-gradient(to bottom, #f2fcfe, #1c92d2); 
+    background: #007991;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
 }
