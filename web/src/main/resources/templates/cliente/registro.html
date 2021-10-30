@@ -17,31 +17,28 @@
          <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
          <input type="text" placeholder="Nombres" th:field="*{firstName}">
-         
          </div>
 
          <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
          <input type="text" placeholder="Apellidos" th:field="*{lastName}">
-            
             </div>
          
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
          <input type="text" placeholder="Correo Electronico" data-inputmask="'alias': 'email'"
          autocomplete="off" th:field="*{email}">
-         
          </div>
 
          <div class="input-contenedor">
-            <i class="fas fa-envelope icon"></i>
+            <i class="fas fa-phone-alt icon"></i>
             <input type="text" placeholder="Teléfono" data-inputmask="'mask': '(999) 999-9999'" th:field="*{phone}">
-            
         </div>
          
         <div class="input-contenedor">
             <i class="fas fa-user icon"></i>
              <input type="text" placeholder="Usuario" th:field="*{user.userID}">
+        </div>
 
          <div class="input-contenedor">
         <i class="fas fa-key icon"></i>
@@ -55,6 +52,23 @@
          
      </div>
     </form>
+    <p th:text="${mensaje}">
+
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/jquery-ui/jquery-ui.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap-datepicker/js/bootstrap-datepicker.min.js}"></script>
+        <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
+    
+        <script>
+          $('.input-group.date').datepicker({
+            autoclose: true,
+            todayHighlight: true
+          });
+        </script>
+        <script>
+          $(":input").inputmask();
+        </script>
+        
 </body>
 </html>
 
