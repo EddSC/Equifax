@@ -22,7 +22,12 @@
          <div class="input-contenedor">
          <i class="fas fa-user icon"></i>
          <input type="text" placeholder="Apellidos" th:field="*{lastName}">
-            </div>
+         </div>
+
+         <div class="input-contenedor">
+         <i class="fas fa-user icon"></i>
+         <input type="text" placeholder="DNI" th:field="*{dni}">
+         </div>
          
          <div class="input-contenedor">
          <i class="fas fa-envelope icon"></i>
@@ -75,9 +80,9 @@
     body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #007991;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #78ffd6, #007991);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #78ffd6, #007991); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #007991;
+    background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+    background: linear-gradient(to right, #78ffd6, #007991);
     background-size: cover;
     background-attachment: fixed;
 }

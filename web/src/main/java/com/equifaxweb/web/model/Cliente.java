@@ -27,6 +27,7 @@ public class Cliente {
     private Integer id;
     private String firstName;
     private String lastName;
+    private String dni;
     private String email;
     private String phone;   
     @OneToOne(fetch = FetchType.LAZY)
