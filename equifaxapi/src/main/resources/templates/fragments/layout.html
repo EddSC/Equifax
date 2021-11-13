@@ -17,7 +17,7 @@
   <link th:rel="stylesheet" th:href="@{/resources/static/css/templatemo-style.css}"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">App</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <th:block th:if="${session.user==null}">
-              <li><a href="/cliente/registro"><span class="glyphicon glyphicon-user"></span>Sign Up </a></li>
+              <li><a href="/cliente/registro"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign Up&nbsp;&nbsp; </a></li>
               <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </th:block>   
             <th:block th:if="${session.user!=null}">
