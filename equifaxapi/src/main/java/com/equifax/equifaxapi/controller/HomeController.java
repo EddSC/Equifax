@@ -8,6 +8,7 @@ public class HomeController {
 
     private static final String HOME_INDEX ="welcome"; 
     private static final String VIEW_DASHBOARD ="dashboard";
+    private static final String VIEW_INFORMACION ="informacion";
 
     @GetMapping("/")
     public String index(Model model) {
@@ -17,5 +18,10 @@ public class HomeController {
     @GetMapping("/dashboard")
     public String dashboard(Model model) {
         return VIEW_DASHBOARD;
+    }
+
+    @GetMapping("/informacion")
+    public String informacion(Model model) {
+        return VIEW_INFORMACION;
     }
 }

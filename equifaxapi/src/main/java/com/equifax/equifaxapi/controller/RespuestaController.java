@@ -47,4 +47,10 @@ public class RespuestaController {
         
     }
     
+    @GetMapping(value = "/listaclientes/", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Respuesta>> getAll() {
+        List<Respuesta> respuesta = respuestaData.findAll();
+            return new ResponseEntity<>(respuesta,HttpStatus.OK);
+
+    }
 }
