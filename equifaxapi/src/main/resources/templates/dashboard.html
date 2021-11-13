@@ -11,17 +11,34 @@
     
 </head>
 <body>
-  <div class="container">
-    <h1 class="text-center">REPORTE CREDITICIO</h1>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">SCORE CREDITICIO</h5>
-        <div id="chartdiv"></div>
-      </div>
-    </div>
-  </div>
   <div class="container" id="app">
-   <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Reporte de Deudas de Personas</h3>
+      </div>
+      <div class="card-body">
+        <form @submit.prevent="ocultarDashboard">
+          <input 
+            class="form-control form-control-lg" 
+            type="number"
+            placeholder="Buscar por N# DNI" 
+            aria-label=".form-control-lg example"
+            v-model.trim="dni"
+          >
+          <br>
+          <button class="btn btn-primary form-control" type="submit" @click="equifaxApi">Buscar</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="container" v-if="ocultar" id="hide">
+     <h1 class="text-center">REPORTE CREDITICIO</h1>
+     <div class="card">
+       <div class="card-body">
+         <h5 class="card-title">SCORE CREDITICIO</h5>
+         <div id="chartdiv"></div>
+       </div>
+     </div>
      <hr>
      <h1 class="text-center">DATOS PERSONALES</h1>
      <hr>

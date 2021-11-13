@@ -65,7 +65,6 @@ function lookUpGrade(lookupScore, grades) {
   }
   return null;
 }
-
 // create chart
 var chart = am4core.create("chartdiv", am4charts.GaugeChart);
 chart.hiddenState.properties.opacity = 0;
@@ -188,7 +187,8 @@ hand.events.on("positionchanged", function(){
   label.fill = am4core.color(matchingGrade.color);
 })
 
-setInterval(function() {
-    var value = chartMin + Math.random() * (chartMax - chartMin);
-    hand.showValue(972, 1000, am4core.ease.cubicOut);
+setTimeout(function() {
+    const value = 700 + Math.random() * (1000 - 700);
+    hand.showValue(value, 1000, am4core.ease.cubicOut);
 }, 2000);
+
