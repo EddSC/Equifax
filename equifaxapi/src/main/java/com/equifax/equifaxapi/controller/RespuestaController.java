@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.equifax.equifaxapi.repository.*;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -14,6 +15,7 @@ import java.util.Optional;
 public class RespuestaController {
     private final RespuestaRepository respuestaData;
     private final ConsultaRepository consultaData;
+    DatosConsulta consulta;
 
     public RespuestaController(RespuestaRepository respuestaData,
     ConsultaRepository consultaData){
@@ -45,6 +47,13 @@ public class RespuestaController {
         }
 
         
+    }
+
+    @GetMapping(value = "/listaclientes", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Respuesta>> getRespuesta() {
+        List<Respuesta> respuesta = respuestaData.findAll();
+            return new ResponseEntity<>(respuesta,HttpStatus.OK);
+             
     }
     
 }
