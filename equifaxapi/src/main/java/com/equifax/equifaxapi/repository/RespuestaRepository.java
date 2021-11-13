@@ -13,6 +13,5 @@ public interface RespuestaRepository extends JpaRepository<Respuesta, Integer>{
     @Query(value = "SELECT o FROM Respuesta o WHERE o.dni=?1")
     Optional<Respuesta> findByNumero(String dni);
 
-    @Query(value = "SELECT o FROM Respuesta")
-    List<Respuesta> getAllActiveProductos();
+    
 }
