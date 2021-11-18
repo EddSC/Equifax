@@ -32,20 +32,31 @@
             </li>                           
             <th:block th:if="${session.user!=null}">
               <li class="nav-item">
-                <a class="nav-link" href="/jasper/repventas">Reporte</a>
+                <a class="nav-link" href="/jasper/repventas"><img src="/image/report.png" th:src="@{/image/report.png}"/>Reporte</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="/dashboard">Dashboard</a>
+                <a class="nav-link" href="/dashboard"><img src="/image/dashboard.png" th:src="@{/image/dashboard.png}"/>Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/informacion">Informacion</a>
-              </li>                                          
+                <a class="nav-link" href="/informacion"><img src="/image/layout.png" th:src="@{/image/layout.png}"/>Informacion</a>
+              </li> 
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>                                         
             </th:block>
           </ul>      
 
           <form class="form-inline" th:action="@{/catalogo/index}" method="get">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="searchName">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
             <th:block th:if="${session.user==null}">
@@ -82,5 +93,17 @@
     <script th:src="@{/webjars/jquery.inputmask/jquery.inputmask.min.js}"></script>    
 
   </body>
-  
+  <style>
+    .navbar-dark {
+      padding: 10px;
+      /*
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #2573e7;
+    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
+    background: linear-gradient(to right, #E2E2E2, #6988ec);
+    background-size: cover;
+    background-attachment: fixed;*/
+}
+  </style>
   </html>
