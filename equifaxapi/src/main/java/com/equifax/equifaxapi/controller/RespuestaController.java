@@ -5,7 +5,9 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 import com.equifax.equifaxapi.repository.*;
+
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -43,14 +45,26 @@ public class RespuestaController {
         }else{
             return new ResponseEntity<Respuesta>(HttpStatus.NOT_FOUND);
         }
-
-        
+  
     }
     
-    @GetMapping(value = "/listaclientes/", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Respuesta>> getAll() {
-        List<Respuesta> respuesta = respuestaData.findAll();
-            return new ResponseEntity<>(respuesta,HttpStatus.OK);
+    @GetMapping(value = "/datosConsulta", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<DatosConsulta>> datosConsulta() {
+        return  new ResponseEntity<List<DatosConsulta>>(
+            consultaData.findAll(), HttpStatus.OK);
 
     }
+
+    @GetMapping(value = "/deudaTotal", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Map<String, Object>>> deuda(){
+        return  new ResponseEntity<List<Map<String, Object>>>(
+            consultaData.querySumaTotal(), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/diasVenciadas", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Map<String, Object>>> diasVencidas(){
+        return  new ResponseEntity<List<Map<String, Object>>>(
+            consultaData.querySumaTotalDias(), HttpStatus.OK);
+    }
+
 }

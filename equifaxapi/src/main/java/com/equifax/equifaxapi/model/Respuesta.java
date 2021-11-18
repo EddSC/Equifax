@@ -18,6 +18,8 @@ public class Respuesta {
     private String dni;
     private String nombres;
     private String apellidos;
+    private String nacionalidad;
+    private String ocupacion;
     @Transient
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "respuesta_id")
