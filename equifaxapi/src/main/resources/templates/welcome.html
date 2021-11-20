@@ -3,8 +3,8 @@
 th:replace="~{fragments/layout :: layout (~{::body},'home')}">
 
 
-<body style="background-image: url('../static/image/4.jpg'); ">
-  <div class="container" >
+<body style="background-image: url(image/8.jpg); background-size:2000px">
+  <div  >
 
     <section id="video-container">
       <div class="video-overlay"></div>
@@ -20,7 +20,7 @@ th:replace="~{fragments/layout :: layout (~{::body},'home')}">
           <a href="" target="_blank"><i class="fa fa-iconequifax"></i></a>
         </div>
       </div>
-     <video autoplay="" loop="" muted  width="2000" >
+     <video autoplay="" loop="" muted>
         <source src="../static/image/loop.mp4" type="video/mp4" th:src="@{/image/loop.mp4}" />
       </video>
     </section>
@@ -33,6 +33,10 @@ th:replace="~{fragments/layout :: layout (~{::body},'home')}">
   <style>
     .col-md-10 {
       padding: 10px;
+    }
+
+    .container-fluid .container .xd-container{
+      width: 100%;
     }
 
     #video-container .video-overlay {

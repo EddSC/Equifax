@@ -16,41 +16,30 @@
   <link th:rel="stylesheet" th:href="@{/resources/css/w3.css}" />
   <link th:rel="stylesheet" th:href="@{/resources/static/css/templatemo-style.css}"/>
 </head>
-<body>
+<body >
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">App</a>
+        <a class="navbar-brand" href="#"><img src="/image/layout.png" th:src="@{/image/layout.png}"/>App</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/"><img src="/image/home.png" th:src="@{/image/home.png}"/>Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contacto/create">Contacto</a>
+              <a class="nav-link" href="/contacto/create"><img src="/image/contact.png" th:src="@{/image/contact.png}"/>Contacto</a>
             </li>                           
             <th:block th:if="${session.user!=null}">
               <li class="nav-item">
-                <a class="nav-link" href="/jasper/repventas"><img src="/image/report.png" th:src="@{/image/report.png}"/>Reporte</a>
+                <a class="nav-link" href="/jasper/repventas"><img src="/image/report1.png" th:src="@{/image/report1.png}"/>Reporte</a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="/dashboard"><img src="/image/dashboard.png" th:src="@{/image/dashboard.png}"/>Dashboard</a>
+                <a class="nav-link" href="/dashboard"><img src="/image/dashboard2.png" th:src="@{/image/dashboard2.png}"/>Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/informacion"><img src="/image/layout.png" th:src="@{/image/layout.png}"/>Informacion</a>
-              </li> 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>                                         
+                <a class="nav-link" href="/informacion"><img src="/image/report2.png" th:src="@{/image/report2.png}"/>Informacion</a>
+              </li>                                          
             </th:block>
           </ul>      
 
@@ -73,14 +62,15 @@
     </nav> 
     
     <div class="container-fluid">
+      <th:block th:include="${template}" />
       <div class="container xd-container">
   
-        <th:block th:include="${template}" />
+        
   
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
-              Copyright @ 2021 SoftTech
+              Copyright @ 2021 usmp
           </div>
         </div>
       </div>
@@ -96,14 +86,6 @@
   <style>
     .navbar-dark {
       padding: 10px;
-      /*
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #2573e7;
-    background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);
-    background: linear-gradient(to right, #E2E2E2, #6988ec);
-    background-size: cover;
-    background-attachment: fixed;*/
 }
   </style>
   </html>
