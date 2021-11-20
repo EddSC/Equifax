@@ -25,20 +25,20 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/"><img src="/image/home.png" th:src="@{/image/home.png}"/>Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/"><img src="/image/home.png" width="28px" height="28px" th:src="@{/image/home.png}"/>Inicio <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contacto/create"><img src="/image/contact.png" th:src="@{/image/contact.png}"/>Contacto</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="/contacto/create"><img src="/image/contact.png" width="23px" height="23px" th:src="@{/image/contact.png}"/>Contacto</a>
             </li>                           
             <th:block th:if="${session.user!=null}">
-              <li class="nav-item">
-                <a class="nav-link" href="/jasper/repventas"><img src="/image/report1.png" th:src="@{/image/report1.png}"/>Reporte</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/jasper/repventas"><img src="/image/report1.png" width="23px" height="22px" th:src="@{/image/report1.png}"/>Reporte</a>
               </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="/dashboard"><img src="/image/dashboard2.png" th:src="@{/image/dashboard2.png}"/>Dashboard</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/dashboard"><img src="/image/dashboard2.png" width="23px" height="22px" th:src="@{/image/dashboard2.png}"/>Dashboard</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/informacion"><img src="/image/report2.png" th:src="@{/image/report2.png}"/>Informacion</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/informacion"><img src="/image/report2.png" th:src="@{/image/report2.png}"/>Información</a>
               </li>                                          
             </th:block>
           </ul>      
@@ -53,7 +53,7 @@
               <li><a href="/usuario/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </th:block>   
             <th:block th:if="${session.user!=null}">
-              <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+              <li><a href="/usuario/logout"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</a></li>
             </th:block>
           </ul>
 
@@ -84,8 +84,13 @@
 
   </body>
   <style>
-    .navbar-dark {
-      padding: 10px;
-}
+    .navbar-dark 
+    {
+      padding: 15px;
+    }
+    a{
+      font-weight: bold;
+      padding-left: 2px;
+    }
   </style>
   </html>
