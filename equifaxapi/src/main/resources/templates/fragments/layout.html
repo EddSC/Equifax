@@ -25,20 +25,20 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/"><img src="/image/home.png" width="28px" height="28px" th:src="@{/image/home.png}"/>Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/"><img src="/image/home.png" width="28px" height="28px" th:src="@{/image/home.png}"/><span class="tx-menu">Inicio</span> <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/contacto/create"><img src="/image/contact.png" width="23px" height="23px" th:src="@{/image/contact.png}"/>Contacto</a>
+              <a class="nav-link" href="/contacto/create"><img src="/image/contact.png" width="23px" height="23px" th:src="@{/image/contact.png}"/><span class="tx-menu">Contacto</span></a>
             </li>                           
             <th:block th:if="${session.user!=null}">
               <li class="nav-item active">
-                <a class="nav-link" href="/jasper/repventas"><img src="/image/report1.png" width="23px" height="22px" th:src="@{/image/report1.png}"/>Reporte</a>
+                <a class="nav-link" href="/jasper/repventas"><img src="/image/report1.png" width="23px" height="22px" th:src="@{/image/report1.png}"/><span class="tx-menu">Reporte</span></a>
               </li> 
               <li class="nav-item active">
-                <a class="nav-link" href="/dashboard"><img src="/image/dashboard2.png" width="23px" height="22px" th:src="@{/image/dashboard2.png}"/>Dashboard</a>
+                <a class="nav-link" href="/dashboard"><img src="/image/dashboard2.png" width="23px" height="22px" th:src="@{/image/dashboard2.png}"/><span class="tx-menu">Dashboard</span> </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="/informacion"><img src="/image/report2.png" th:src="@{/image/report2.png}"/>Información</a>
+                <a class="nav-link" href="/informacion"><img src="/image/report2.png" th:src="@{/image/report2.png}"/><span class="tx-menu">Información</span></a>
               </li>                                          
             </th:block>
           </ul>      
@@ -86,10 +86,9 @@
   <style>
     .navbar-dark 
     {
-      padding: 15px;
+      padding: 13px;
     }
-    a{
-      font-weight: bold;
+    .tx-menu{
       padding-left: 2px;
     }
   </style>
