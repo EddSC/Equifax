@@ -59,7 +59,7 @@ ORDER BY o.deuda desc]]>
 		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch">
+		<band height="78" splitType="Stretch">
 			<line>
 				<reportElement x="0" y="40" width="551" height="1" uuid="086bd5ea-dc15-410f-803f-faa3a75a6e5f"/>
 			</line>
@@ -111,9 +111,9 @@ ORDER BY o.deuda desc]]>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="44" splitType="Stretch">
 			<textField>
-				<reportElement x="20" y="30" width="100" height="30" uuid="b31f75c4-6db9-4418-a7d0-2bc47e5ca955">
+				<reportElement x="20" y="10" width="100" height="30" uuid="b31f75c4-6db9-4418-a7d0-2bc47e5ca955">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="868914ed-b660-480a-be27-74b24b8adc09"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -124,7 +124,7 @@ ORDER BY o.deuda desc]]>
 				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="120" y="30" width="100" height="30" uuid="ccaaae6b-36e4-45b5-8a67-2ed7af6264e9">
+				<reportElement x="120" y="10" width="100" height="30" uuid="ccaaae6b-36e4-45b5-8a67-2ed7af6264e9">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f1114b13-c0bc-48e0-99f0-544d72f1c74d"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
@@ -134,7 +134,7 @@ ORDER BY o.deuda desc]]>
 				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="227" y="30" width="100" height="30" uuid="081b445c-4c4f-4313-8ec3-fdd9e5eafab7">
+				<reportElement x="227" y="10" width="100" height="30" uuid="081b445c-4c4f-4313-8ec3-fdd9e5eafab7">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ad8b030-4655-4197-bae4-03091c5acc22"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
@@ -144,7 +144,7 @@ ORDER BY o.deuda desc]]>
 				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="330" y="30" width="100" height="30" uuid="f5071b75-350a-4254-84b8-6967ba87b01a">
+				<reportElement x="330" y="10" width="100" height="30" uuid="f5071b75-350a-4254-84b8-6967ba87b01a">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="312bfabb-5b78-4b34-9d7c-174791445182"/>
 				</reportElement>
 				<textElement verticalAlignment="Top">
@@ -154,7 +154,7 @@ ORDER BY o.deuda desc]]>
 				<textFieldExpression><![CDATA[$F{vencidos}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="444" y="30" width="100" height="30" uuid="eb06c43c-605c-4ac2-ac8e-dec5692f2489">
+				<reportElement x="444" y="10" width="100" height="30" uuid="eb06c43c-605c-4ac2-ac8e-dec5692f2489">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ba700f6-6f1e-4b00-a682-59e1624b0fd2"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
