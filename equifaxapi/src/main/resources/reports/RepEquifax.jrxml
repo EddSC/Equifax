@@ -76,6 +76,12 @@
 				</textElement>
 				<text><![CDATA[E-mail]]></text>
 			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="551" height="1" uuid="7c3e52a1-196e-4f95-9367-46538277960b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="551" height="1" uuid="ec894ddc-abaa-4f9a-9c99-f9c2c0d32363"/>
+			</line>
 		</band>
 	</columnHeader>
 	<detail>

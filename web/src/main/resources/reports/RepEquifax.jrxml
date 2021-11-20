@@ -4,7 +4,7 @@
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="da_equifax1"/>
 	<queryString language="SQL">
-		<![CDATA[select tn.first_name, tn.last_name, tn.email, tn.dni from t_cliente tn where tn.id = 4]]>
+		<![CDATA[select tn.first_name, tn.last_name, tn.email, tn.dni from t_cliente tn where tn.id = 3]]>
 	</queryString>
 	<field name="first_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="first_name"/>
@@ -38,6 +38,10 @@
 				</textElement>
 				<text><![CDATA[Reporte de Equifax]]></text>
 			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="75" height="70" uuid="4bc7eecb-1bb6-47b4-b545-a70fc387d91c"/>
+				<imageExpression><![CDATA["https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0002/7177/brand.gif?itok=iKwm_yv4"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -72,6 +76,12 @@
 				</textElement>
 				<text><![CDATA[E-mail]]></text>
 			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="551" height="1" uuid="7c3e52a1-196e-4f95-9367-46538277960b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="40" width="551" height="1" uuid="ec894ddc-abaa-4f9a-9c99-f9c2c0d32363"/>
+			</line>
 		</band>
 	</columnHeader>
 	<detail>
